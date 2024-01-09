@@ -32,3 +32,24 @@ function firstCheckSquareElement(array1, array2) {
 
 firstCheckSquareElement([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
 // o(n^2)
+
+
+// -----------------------------------------------
+// Another Solution with o(n)
+
+function firstCheckSquareElementWithLiner(array1, array2) {
+
+    let isAllSquare = true
+    for (let i = 0; i < array1.length; i++) {
+
+        if (Math.pow(array1[i], 2) === array2[i]) {
+            isAllSquare = true
+            continue
+        } else isAllSquare = false
+
+
+    }
+    console.log(isAllSquare)
+}
+
+firstCheckSquareElementWithLiner([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
