@@ -30,7 +30,7 @@ function firstCheckSquareElement(array1, array2) {
 
 }
 
-firstCheckSquareElement([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
+// firstCheckSquareElement([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
 // o(n^2)
 
 
@@ -39,17 +39,21 @@ firstCheckSquareElement([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
 
 function firstCheckSquareElementWithLiner(array1, array2) {
 
+    if (array1.length !== array2.length) {
+        throw new Error('array length are not same')
+    }
     let isAllSquare = true
     for (let i = 0; i < array1.length; i++) {
 
         if (Math.pow(array1[i], 2) === array2[i]) {
             isAllSquare = true
             continue
-        } else isAllSquare = false
-
-
+        } else {
+            isAllSquare = false
+            break
+        }
     }
     console.log(isAllSquare)
 }
 
-firstCheckSquareElementWithLiner([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
+firstCheckSquareElementWithLiner([1, 2, 3, 4, 5], [1, 4, 9, 16, 25])
