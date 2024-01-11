@@ -4,7 +4,6 @@
 // [1,4,9,16,20]
 
 // ---------------- first solution -------------
-
 function firstCheckSquareElement(array1, array2) {
 
 
@@ -30,7 +29,7 @@ function firstCheckSquareElement(array1, array2) {
 
 }
 
-// firstCheckSquareElement([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
+firstCheckSquareElement([1, 2, 3, 4, 5], [1, 4, 9, 16, 20])
 // o(n^2)
 
 
@@ -56,4 +55,40 @@ function firstCheckSquareElementWithLiner(array1, array2) {
     console.log(isAllSquare)
 }
 
-firstCheckSquareElementWithLiner([1, 2, 3, 4, 5], [1, 4, 9, 16, 25])
+firstCheckSquareElementWithLiner([1, 2, 4, 2], [1, 4, 16, 4])
+
+//-------------------------------------------------------------------
+
+// -----------------------------------------------------------------------
+// Solve With Mapping
+
+function checkSquareWith(array1, array2) {
+
+    let map1 = {};
+    let map2 = {};
+
+    for (let i of array1) {
+        map1[i] = (map1[i] || 0) + 1
+    }
+
+    for (let i of array2) {
+        map2[i] = (map2[i] || 0) + 1
+    }
+
+    for (let key in map1) {
+
+        if (!map2[key * key]) {
+            return false
+        }
+
+        if (map1[key] !== map2[key * key]) {
+            return false
+        }
+
+    }
+
+    return true
+}
+
+const result = checkSquareWith([1, 2, 4, 2], [1, 4, 16, 4]);
+console.log(result)
