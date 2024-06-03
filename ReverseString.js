@@ -14,5 +14,4 @@ function reverseString(string) {
     console.log(reversedString)
 }
 
-
 reverseString('Stay updated on your professional world')
