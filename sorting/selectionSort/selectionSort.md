@@ -18,7 +18,7 @@ You can find the implementation of the Selection Sort algorithm in both JavaScri
 
 For the JavaScript implementation of the Selection Sort algorithm, navigate to the following file:
 
-- [selection_sort.js](./selection.js)
+- [selection.js](./selection.js)
 
 <!-- ### Python Implementation -->
 
