@@ -20,7 +20,7 @@ For the JavaScript implementation of the Selection Sort algorithm, navigate to t
 
 - [selectionSort.js](./selectionSort.js)
 
-### Python Implementation -->
+### Python Implementation
 
 For the Python implementation of the Selection Sort algorithm, navigate to the following file:
 
