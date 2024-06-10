@@ -94,14 +94,43 @@
 
 
 function outer() {
-    var x = 10 , z = 100
+    var x = 10, z = 100
     return function inner() {
-        console.log(x )
-        console.log(z )
+        console.log(x)
+        console.log(z)
     }
 
 }
 
-outer()()
-let result = (5*4) - (2+1)
-console.log(result)
+// outer()()
+// let result = (5*4) - (2+1)
+// console.log(result)
+// 
+// function greeting(name, callback) {
+//     console.log('Hello, ' + name + '!');
+//     callback();
+// }
+
+function farewell() {
+    console.log('Goodbye!');
+}
+
+// greeting('Alice', farewell);
+
+function greet(farewell) {
+    let time = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        // const element = array[i];
+        time++
+        setTimeout(() => {
+            console.log('Hello', i)
+            if (i === 5) {
+                farewell()
+            }
+        }, i * 1000)
+        // console.log('time ', time)
+    }
+}
+
+greet(farewell)
