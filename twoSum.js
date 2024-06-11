@@ -133,4 +133,21 @@ function greet(farewell) {
     }
 }
 
-greet(farewell)
+// greet(farewell)
+
+console.log("Start")
+
+function ab() {
+    console.log('CallBack')
+}
+
+setTimeout(ab, 500)
+
+for (let i = 0; i < 20000; i++) {
+    // const element = array[i];
+    console.log('A')
+}
+
+console.log('End')
+
+
