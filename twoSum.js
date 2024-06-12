@@ -135,19 +135,68 @@ function greet(farewell) {
 
 // greet(farewell)
 
-console.log("Start")
+// console.log("Start")
 
-function ab() {
-    console.log('CallBack')
-}
+// function ab() {
+//     console.log('CallBack')
+// }
 
-setTimeout(ab, 500)
+// setTimeout(ab, 500)
 
-for (let i = 0; i < 20000; i++) {
-    // const element = array[i];
-    console.log('A')
-}
+// for (let i = 0; i < 20000; i++) {
+//     // const element = array[i];
+//     console.log('A')
+// }
 
-console.log('End')
+// console.log('End')
 
 
+
+const users = [
+    {
+        firstName: 'akshay',
+        lastName: 'saini',
+        age: 26
+    },
+    {
+        firstName: 'donald',
+        lastName: 'trump',
+        age: 75
+    },
+    {
+        firstName: 'elon',
+        lastName: 'musk',
+        age: 50
+    },
+    {
+        firstName: 'deepika',
+        lastName: 'padukone',
+        age: 26
+    }
+]
+
+// const output = users.reduce(function (acc, curr) {
+
+//     if (curr.age < 30) {
+//         let fullName = curr.firstName.concat(' ', curr.lastName)
+//         acc.push(fullName)
+//     }
+//     return acc
+// }, [])
+
+// console.log(output)
+
+
+const output = users.reduce(function (acc, curr) {
+
+    if (acc[curr.age] < 30) {
+        acc[curr.age] = ++acc[curr.age]
+    } else {
+        acc[curr.age] = 1
+    }
+    // acc[curr.age] = 1
+    console.log('clcll', acc)
+    return acc
+}, {})
+
+console.log(output)
