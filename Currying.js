@@ -20,3 +20,11 @@ let finaFun = insideFunFun(5)
 console.log(finaFun)  // 250
 
 
+let counter = 0
+
+// console.log(counter++) // 0
+// console.log(counter)  // 1
+
+console.log(++counter) // 1
+console.log(counter)  // 1
+    

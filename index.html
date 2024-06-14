@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./twoSum.js"> </script>
 </head>
+
 <body>
-    
+    <h1>Promise Chaing to prevent the callback hell</h1>
+
+
+    <script>
+
+
+        const POSTS = 'https://jsonplaceholder.typicode.com/posts'
+        const COMMENTS = 'https://jsonplaceholder.typicode.com/comments'
+
+        const posts = fetch(POSTS);
+        const comments = fetch(COMMENTS);
+
+        posts.then(function (post) {
+            console.log('post', post)
+            return post
+        }).then(function(){
+            comments.then((data)=> data.json()).then((data)=> console.log("data", data))
+        }).then((res)=>{
+            console.log('res => ' , res)
+        })
+        // .then(function (data) {
+        //     console.log(data)
+        // })
+
+
+
+
+
+
+
+
+
+
+    </script>
 </body>
+
 </html>

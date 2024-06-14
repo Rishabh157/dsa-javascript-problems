@@ -199,4 +199,4 @@ const output = users.reduce(function (acc, curr) {
     return acc
 }, {})
 
-console.log(output)
+// console.log(output)
