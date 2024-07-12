@@ -37,7 +37,6 @@ class MyArray {
         return this.lastItem
     }
 
-
     shifItem(index) {
         for (let i = 0; i < this.length - 1; i++) {
             this.data[i] = this.data[i + 1]
@@ -47,6 +46,7 @@ class MyArray {
     }
 
 }
+
 
 let arr = new MyArray();
 
