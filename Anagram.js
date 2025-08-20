@@ -23,6 +23,5 @@ function isAnagram(string1, string2) {
     return true
 }
 
-
 const result = isAnagram('hello', 'olleh');
 console.log(result)

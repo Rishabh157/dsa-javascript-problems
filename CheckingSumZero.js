@@ -11,7 +11,7 @@ function findZeroPairWithTwoLoops(arr) {
     for (let i in arr) {
         for (let j = 1; j < arr.length; j++) {
             if (arr[i] + arr[j] === 0) {
-                return console.log([arr[i], arr[j]])
+                return console.log([arr[i], arr[j]]);
             }
         }
     }
